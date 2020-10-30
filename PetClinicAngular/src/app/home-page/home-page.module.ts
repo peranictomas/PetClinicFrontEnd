@@ -6,11 +6,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon'
 import {MatButtonModule} from '@angular/material/button';
 import { CommonModule } from '@angular/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
   ],
   imports: [
+    HttpClient,
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule,
