@@ -10,6 +10,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { RegisterPageComponent } from './register-page/register-page.component';
   ],
   imports: [
     MatToolbarModule,
+    HttpClientModule,
     MatIconModule,
     BrowserModule,
     MatButtonModule,
