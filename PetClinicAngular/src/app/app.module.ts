@@ -27,6 +27,7 @@ import { RegisterPageComponent } from './register-page/register-page.component';
     AppRoutingModule,
     RouterModule.forRoot([
       { path: '', component: HomePageComponent },
+      {path: 'register', component: RegisterPageComponent}
     ]),
   ],
   exports: [RouterModule],

@@ -1,6 +1,6 @@
-.container{
-    justify-content: flex-end;
-}
 .marginTiny{
     margin-left:1vw;
 }
+.example-spacer {
+    flex: 1 1 auto;
+  }
