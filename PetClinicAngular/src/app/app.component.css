@@ -1,0 +1,23 @@
+.absoluteRight{
+    position: absolute;
+    right: 2vw;
+}
+
+.relativeRight{
+    position: relative;
+    left:73vw;
+}
+
+.relativeLeft{
+    position: relative;
+    left:72vw;
+}
+
+.messageBoardAlign{
+    position: relative;
+    left:89vw;
+}
+
+.marginTiny{
+    margin-left:1vw;
+}
