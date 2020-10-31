@@ -15,13 +15,12 @@ export class RegisterPageComponent implements OnInit {
   registerModel;
   ngOnInit(): void {
   }
-
-  registerJSON(firstName,lastName,email,password,passwordConfirm){
-    this.model = new registermodel(firstName,lastName,email,password,passwordConfirm);
+  registerJSON(firstName:string,lastName:string,email:string,password:string,passwordConfirm:string){
+    this.model = new registermodel(email,password,passwordConfirm,firstName,lastName);
     console.log(this.model);
     this._registerService.registerAccount(this.model)
     .subscribe(response => {
-      console.log("This is the response" + response);
+      console.log("This is the response: " + response);
     })
   }
 

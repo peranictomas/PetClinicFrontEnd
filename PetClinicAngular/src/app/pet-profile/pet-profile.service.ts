@@ -4,14 +4,13 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class RegisterPageService {
+export class PetProfileService {
 
-  url = "https://localhost:44346/api/user/register";
   constructor(private http: HttpClient) { }
 
+  url = "https://localhost:44346/api/user/userdata";
 
-  registerAccount(jsonRegister){
-    return this.http.post(this.url,jsonRegister);
+  getAccount(accountData){
+    return this.http.get(this.url,accountData);
   }
-
 }

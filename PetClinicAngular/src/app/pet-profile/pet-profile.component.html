@@ -1,0 +1,27 @@
+<p>
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My App</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" routerLink=''>
+        <mat-icon>home</mat-icon>
+      </button>
+    </mat-toolbar>
+  </p> 
+
+    <div class="container">
+      <h1>Pet Profile</h1>
+      <p>Enter token to receive pet data</p>
+      <hr>
+  
+      <label for="petData"><b>Pet Data</b></label>
+      <input type="text" placeholder="Enter Token" name="petData" #petData required>
+
+      <hr>  
+      <button class="registerbtn">Get Data</button>
+    </div>
+
+
+<router-outlet></router-outlet>

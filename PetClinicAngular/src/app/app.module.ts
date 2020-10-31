@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PetProfileComponent } from './pet-profile/pet-profile.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     HomePageComponent,
     LoginPageComponent,
-    RegisterPageComponent
+    RegisterPageComponent,
+    PetProfileComponent
   ],
   imports: [
     MatToolbarModule,
@@ -30,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     RouterModule.forRoot([
       { path: '', component: HomePageComponent },
-      {path: 'register', component: RegisterPageComponent}
+      {path: 'register', component: RegisterPageComponent},
+      {path: 'profile', component: PetProfileComponent}
     ]),
   ],
   exports: [RouterModule],
