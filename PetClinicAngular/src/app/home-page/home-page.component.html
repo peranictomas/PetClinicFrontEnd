@@ -1,6 +1,8 @@
-  <p>
-    <mat-toolbar color="primary">
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+<mat-drawer-container class="example-container">
+
+   <div>
+    <mat-toolbar class="myToolbar">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
       <span>My App</span>
@@ -12,26 +14,13 @@
         <mat-icon>account_box</mat-icon>
       </button>
     </mat-toolbar>
-  </p> 
+   </div>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Auto-resizing sidenav</p>
+    </mat-drawer>
 
-<!-- <div>
-    <mat-toolbar color="primary">
-      <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span class="marginTiny">Sheridan Pet Clinic</span>
-      <span class="relativeLeft">Call 123-123-1234</span>
-      <span class="relativeRight">Book An Appointment</span>
-      <span class="absoluteRight">Shop</span>
-    </mat-toolbar>
-  </div>
   <div>
-    <a>
-      <img src="assets/PetImage1.png" alt="image">
-    </a>
+      <img src="assets/PetImage1.png" alt="image" class="myImage">  
+      <img src="assets/PetImage2.jpg" alt="image" class="myImage">
   </div>
-  <div>
-    <a>
-      <img src="assets/PetImage2.jpg" alt="image">
-    </a>
-  </div> -->
+</mat-drawer-container>

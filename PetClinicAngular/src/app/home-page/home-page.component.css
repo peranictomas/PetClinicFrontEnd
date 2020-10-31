@@ -4,3 +4,27 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+  
+  .myToolbar{
+      background-color: #4027af;
+  }
+  .myImage{
+    width: 100%;
+    height: auto;
+  }
+  .example-container {
+    width: auto;
+    height: auto;
+    background-color: white;
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }
