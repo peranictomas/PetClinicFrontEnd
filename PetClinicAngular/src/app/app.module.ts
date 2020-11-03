@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PetProfileComponent } from './pet-profile/pet-profile.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -27,8 +29,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatToolbarModule,
     HttpClientModule,
     MatIconModule,
+    CommonModule,
     BrowserModule,
     MatSidenavModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatButtonModule,
     BrowserAnimationsModule,
     AppRoutingModule,

@@ -16,11 +16,18 @@
       <p>Enter email to receive pet data</p>
       <hr>
   
-      <label for="petData"><b>Pet Data</b></label>
-      <input type="text" placeholder="Enter Email" name="petData" #petData required>
+      <label for="email"><b>User Data</b></label>
+      <input type="text" placeholder="Enter Email" name="email" #email required>
 
       <hr>  
-      <button (click)="getProfileData()"class="registerbtn">Get Data</button>
+      <button (click)="getProfileData(email.value)"class="registerbtn">Get Data</button>
+    </div>
+
+
+    <div>
+      <ul>
+        <li *ngFor="let item of dataList">{{item}}</li>
+      </ul>
     </div>
 
 

@@ -10,7 +10,7 @@ export class PetProfileService {
 
   url = "https://localhost:44346/api/v1/users/findbyemail?email=";
 
-  getAccount(){
-    return this.http.get(this.url + "demo2@gmail.com");
+  getAccount(email:string){
+    return this.http.get(this.url + email);
   }
 }

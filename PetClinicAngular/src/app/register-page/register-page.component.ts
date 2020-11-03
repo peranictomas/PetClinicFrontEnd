@@ -12,7 +12,6 @@ export class RegisterPageComponent implements OnInit {
 
   constructor(private _registerService: RegisterPageService) { }
   model;
-  registerModel;
   ngOnInit(): void {
   }
   registerJSON(firstName:string,lastName:string,email:string,password:string,passwordConfirm:string){
