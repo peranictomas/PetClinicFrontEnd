@@ -9,38 +9,14 @@ a:hover, a:link, a {
   color:white
 } 
 
-/* 
-
- .marginTiny{
-    margin-left:1vw;
+.jumbotron{
+  background-image: url("src\assets\PetImage1.png");
+  background-size: 100% 100%;
+  color:white;
+  text-align: center;
+  background-position: center;
+  opacity: 0.9;
+  background-repeat: no-repeat; 
+  padding-top: 56.25%;
 }
-.example-spacer {
-    flex: 1 1 auto;
-  }
-  
-  .myToolbar{
-      background-color: #4027af;
-  }
-  .myImage{
-    width: 100%;
-    height: auto;
-  }
-  .example-container {
-    width: auto;
-    height: auto;
-    background-color: white;
-  }
-  
-  .example-sidenav-content {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .example-sidenav {
-    padding: 20px;
-  } 
-  .petIcon, .logo{
-    color: white;
-  } */
+
