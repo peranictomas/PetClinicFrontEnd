@@ -16,6 +16,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { CommonModule } from "@angular/common";
+import {MatTabsModule} from '@angular/material/tabs'
 
 @NgModule({
   declarations: [

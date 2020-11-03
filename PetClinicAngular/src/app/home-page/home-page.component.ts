@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -13,5 +13,5 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }

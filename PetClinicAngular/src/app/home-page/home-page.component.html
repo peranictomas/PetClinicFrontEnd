@@ -1,6 +1,21 @@
-<mat-drawer-container class="example-container">
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+  <a href="#" class="websiteName"><mat-icon>pets</mat-icon>Pet Clinic</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+      <li class="nav-item">
+        <button class="btn btn-success" type="submit" routerLink="register"> Sign Up</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- <mat-drawer-container class="example-container">
 
-   <div>
     <mat-toolbar class="myToolbar">
       <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
@@ -14,7 +29,6 @@
         <mat-icon>account_box</mat-icon>
       </button>
     </mat-toolbar>
-   </div>
     <mat-drawer #drawer class="example-sidenav" mode="side">
       <p>Auto-resizing sidenav</p>
     </mat-drawer>
@@ -23,4 +37,4 @@
       <img src="assets/PetImage1.png" alt="image" class="myImage">  
       <img src="assets/PetImage2.jpg" alt="image" class="myImage">
   </div>
-</mat-drawer-container>
+</mat-drawer-container> -->

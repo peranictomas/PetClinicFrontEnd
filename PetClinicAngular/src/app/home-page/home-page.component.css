@@ -1,4 +1,17 @@
-.marginTiny{
+.websiteName{
+  font-size: 200%;
+  margin-left: 0.5%;
+  color: white;
+}
+
+a:hover, a:link, a { 
+  text-decoration: none; 
+  color:white
+} 
+
+/* 
+
+ .marginTiny{
     margin-left:1vw;
 }
 .example-spacer {
@@ -27,4 +40,7 @@
   
   .example-sidenav {
     padding: 20px;
-  }
+  } 
+  .petIcon, .logo{
+    color: white;
+  } */
