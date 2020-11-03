@@ -12,7 +12,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PetProfileComponent } from './pet-profile/pet-profile.component';
-
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -27,9 +28,11 @@ import { PetProfileComponent } from './pet-profile/pet-profile.component';
     HttpClientModule,
     MatIconModule,
     BrowserModule,
+    MatSidenavModule,
     MatButtonModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    MatDividerModule,
     RouterModule.forRoot([
       { path: '', component: HomePageComponent },
       {path: 'register', component: RegisterPageComponent},
