@@ -15,7 +15,7 @@ export class PetProfileComponent implements OnInit {
   ngOnInit(): void {
   }
   getProfileData(){
-    this._petProfileService.getAccount(this.accountData)
+    this._petProfileService.getAccount()
     .subscribe(response => {
       console.log("This is the response: " + response);
     })

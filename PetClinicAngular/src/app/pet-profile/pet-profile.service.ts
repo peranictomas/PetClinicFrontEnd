@@ -8,9 +8,9 @@ export class PetProfileService {
 
   constructor(private http: HttpClient) { }
 
-  url = "https://localhost:44346/api/user/userdata";
+  url = "https://localhost:44346/api/v1/users/findbyemail?email=";
 
-  getAccount(accountData){
-    return this.http.get(this.url,accountData);
+  getAccount(){
+    return this.http.get(this.url + "demo2@gmail.com");
   }
 }
