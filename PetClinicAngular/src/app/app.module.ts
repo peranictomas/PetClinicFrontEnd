@@ -16,7 +16,8 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { CommonModule } from "@angular/common";
-import {MatTabsModule} from '@angular/material/tabs'
+import {MatTabsModule} from '@angular/material/tabs';
+import { AccountDetailsComponent } from './account-details/account-details.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {MatTabsModule} from '@angular/material/tabs'
     HomePageComponent,
     LoginPageComponent,
     RegisterPageComponent,
-    PetProfileComponent
+    PetProfileComponent,
+    AccountDetailsComponent
   ],
   imports: [
     MatToolbarModule,
