@@ -53,6 +53,8 @@ import { PaymentsPageComponent } from './payments-page/payments-page.component'
       {path: 'appointment', component: AppointmentPageComponent},
       {path: 'board', component: MessageboardPageComponent},
       {path: 'payments', component: PaymentsPageComponent},
+      {path: 'account', component: AccountDetailsComponent},
+      {path: 'login', component: LoginPageComponent},
       {path: 'profile', component: PetProfileComponent}
     ]),
   ],
