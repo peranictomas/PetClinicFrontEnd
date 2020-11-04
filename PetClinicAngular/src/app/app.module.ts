@@ -17,7 +17,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { CommonModule } from "@angular/common";
 import {MatTabsModule} from '@angular/material/tabs';
-import { AccountDetailsComponent } from './account-details/account-details.component'
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { AppointmentPageComponent } from './appointment-page/appointment-page.component';
+import { MessageboardPageComponent } from './messageboard-page/messageboard-page.component';
+import { PaymentsPageComponent } from './payments-page/payments-page.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
     LoginPageComponent,
     RegisterPageComponent,
     PetProfileComponent,
-    AccountDetailsComponent
+    AccountDetailsComponent,
+    AppointmentPageComponent,
+    MessageboardPageComponent,
+    PaymentsPageComponent
   ],
   imports: [
     MatToolbarModule,
@@ -44,6 +50,9 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
     RouterModule.forRoot([
       { path: '', component: HomePageComponent },
       {path: 'register', component: RegisterPageComponent},
+      {path: 'appointment', component: AppointmentPageComponent},
+      {path: 'board', component: MessageboardPageComponent},
+      {path: 'payments', component: PaymentsPageComponent},
       {path: 'profile', component: PetProfileComponent}
     ]),
   ],
