@@ -12,10 +12,10 @@ export class RegisterPageService {
 
 
   registerAccount(jsonRegister){
-    return this.http.post(this.url,jsonRegister).subscribe( response => {
-      JSON.stringify(response);
-    },
-    (err) => {console.log(err,this.errorCheck = true)});
+    return this.http.post(this.url,jsonRegister).subscribe( 
+      err => {console.log(err,this.errorCheck = true)},
+      response => {JSON.stringify(response)
+      });
   }
 
 }
