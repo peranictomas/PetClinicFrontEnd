@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./register-page.component.css']
 })
 export class RegisterPageComponent implements OnInit {
-
+alert:boolean=false
   constructor(private _registerService: RegisterPageService, private router:Router) { }
   model;
   error = true;
@@ -23,7 +23,9 @@ export class RegisterPageComponent implements OnInit {
     console.log("Response: " + this._registerService.errorCheck);
     if (this._registerService.errorCheck == true)
     {
+      this.alert = true;
       this.error = false;
+
     }
     else {
       this.router.navigate(['/','login'])
