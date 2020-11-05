@@ -7,15 +7,12 @@ import { Injectable } from '@angular/core';
 export class RegisterPageService {
 
   url = "https://localhost:44346/api/v1/users/register";
-  public errorCheck = false;
+  errorCheck = false;
   constructor(private http: HttpClient) { }
 
 
   registerAccount(jsonRegister){
-    return this.http.post(this.url,jsonRegister).subscribe( 
-      err => {console.log(err,this.errorCheck = true)},
-      response => {JSON.stringify(response)
-      });
+    return this.http.post(this.url,jsonRegister)
   }
 
 }

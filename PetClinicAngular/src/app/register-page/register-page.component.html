@@ -39,7 +39,7 @@
       <input type="password" placeholder="Confirm Password" name="confirm" #confirm required>      
 
       <hr>  
-      <button (click)="registerJSON(firstName.value,lastName.value,email.value,psw.value,confirm.value)" class="registerbtn">Register</button>
+      <button (click)="registerJSON(firstName.value,lastName.value,email.value,psw.value,confirm.value); " class="registerbtn">Register</button>
     </div>
   
 <router-outlet></router-outlet>
