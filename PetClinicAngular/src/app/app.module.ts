@@ -20,7 +20,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { AppointmentPageComponent } from './appointment-page/appointment-page.component';
 import { MessageboardPageComponent } from './messageboard-page/messageboard-page.component';
-import { PaymentsPageComponent } from './payments-page/payments-page.component'
+import { PaymentsPageComponent } from './payments-page/payments-page.component';
+import { ContactPageComponent } from './contact-page/contact-page.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PaymentsPageComponent } from './payments-page/payments-page.component'
     AccountDetailsComponent,
     AppointmentPageComponent,
     MessageboardPageComponent,
-    PaymentsPageComponent
+    PaymentsPageComponent,
+    ContactPageComponent
   ],
   imports: [
     MatToolbarModule,
