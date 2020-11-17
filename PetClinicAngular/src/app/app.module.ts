@@ -57,7 +57,8 @@ import { ContactPageComponent } from './contact-page/contact-page.component'
       {path: 'payments', component: PaymentsPageComponent},
       {path: 'account', component: AccountDetailsComponent},
       {path: 'login', component: LoginPageComponent},
-      {path: 'profile', component: PetProfileComponent}
+      {path: 'profile', component: PetProfileComponent},
+      {path: 'contact', component: ContactPageComponent }
     ]),
   ],
   exports: [RouterModule],
