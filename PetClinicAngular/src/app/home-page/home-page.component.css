@@ -4,19 +4,88 @@
   color: white;
 }
 
+.body{
+  font-family: Calibri, sans-serif
+}
+
 a:hover, a:link, a { 
   text-decoration: none; 
   color:white
 } 
 
-.jumbotron{
-  background-image: url("src\assets\PetImage1.png");
-  background-size: 100% 100%;
-  color:white;
-  text-align: center;
-  background-position: center;
-  opacity: 0.9;
-  background-repeat: no-repeat; 
-  padding-top: 56.25%;
+#moreMarginSpace{
+  margin-bottom: 5%;
 }
 
+.jumbotron{
+  background-image: url("src\assets\PetImage1.png");
+  background-size: cover;
+  background-position: bottom;
+  opacity: 0.9;
+  color: white;
+  text-align: center;
+  border-radius: 0 !important;
+  margin-bottom: 0%;
+}
+
+.jumbotron2{
+  padding-bottom: 15%;
+  padding-top: 15%;
+  margin-top: 0%;
+}
+
+.jumbotron3{
+  padding-bottom: 15%;
+  padding-top: 15%;
+  margin-top: 0%;
+  background-color: rgb(214, 214, 214);
+}
+
+.jumbotron4{
+  background-image: url("src\assets\PetImage2.jpg");
+  background-size: cover;
+  background-position: bottom;
+  opacity: 0.9;
+  color: white;
+  text-align: center;
+  border-radius: 0 !important;
+  margin-bottom: 0%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.jumbotron5{
+  padding-bottom: 15%;
+  padding-top: 15%;
+  margin-top: 0%;
+}
+
+.jumbotron6{
+  padding-bottom: 15%;
+  padding-top: 15%;
+  margin-top: 0%;
+  background-color: rgb(214, 214, 214);
+}
+
+.jumbotron7{
+  margin-top: 0%;
+  background-color: rgb(228, 13, 78);
+  text-align: center;
+  color: white;
+}
+
+.jumbotron8{
+  margin-top: 0%;
+}
+
+.jumbotron9{
+  padding-bottom: 15%;
+  padding-top: 15%;
+  margin-top: 0%;
+  background-color: rgb(28, 115, 230);
+}
+
+.jumbotron10{
+  margin-top: 0%;
+  background-color: rgb(51, 51, 51);
+}
