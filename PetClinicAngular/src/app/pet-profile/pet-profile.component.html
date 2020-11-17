@@ -25,15 +25,27 @@
 
       <hr>  
       <button (click)="getProfileData(email.value)"class="registerbtn">Get Data</button>
+      <button (click)="getAllProfiles()" class="registerbtn">Get All Data</button>
     </div>
 
 
-    <div>
+    <div *ngFor="let item of dataList">{{item}}>
       <ul>
-        <li *ngFor="let item of dataList">{{item}}</li>
+        <li>{{item}}</li>
       </ul>
     </div>
 
+    <div *ngFor="let data of allUserList; let i = index">
+      <ul>
+        <li>First Name:{{data.firstName}}
+          Last Name:{{data.lastName}}
+          Age:{{data.age}}
+          Address:{{data.address}}
+          Pet Name:{{data.petName}}
+          <input id="{{i}}"(click)="deleteUser($event)" type="button" value="Delete" class="deletebtn"/>
+        </li>
+      </ul>
+    </div>
   
 
 <router-outlet></router-outlet>

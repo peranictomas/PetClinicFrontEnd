@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PetProfileService } from './pet-profile.service';
+import { petprofileusermodel} from '../models/petprofileusermodel'
 
 @Component({
   selector: 'app-pet-profile',
@@ -8,9 +9,14 @@ import { PetProfileService } from './pet-profile.service';
 })
 export class PetProfileComponent implements OnInit {
 
+  @Output() delete: EventEmitter<string> = new EventEmitter();
 
+  
   accountData;
   dataList = [];
+  allUserList:any;
+  length = 0;
+  model;
   constructor(private _petProfileService: PetProfileService) { }
 
   ngOnInit(): void {
@@ -42,5 +48,24 @@ export class PetProfileComponent implements OnInit {
       [this.dataList[0], this.dataList[1]] = [this.dataList[1], this.dataList[0]];
       console.log("This is the response: " + JSON.stringify(response));
     })
+  }
+
+  getAllProfiles(){
+    this.allUserList = [];
+    this._petProfileService.getAllUsers().subscribe(response => {
+      console.log(response);
+      for (var i in response){
+        this.model = new petprofileusermodel(response[i].firstName,response[i].lastName,response[i].age,response[i].address,response[i].petName,);
+        this.allUserList.push(this.model);
+      }
+    })
+  }
+
+  deleteUser(event){
+    var target = event.target || event.srcElement || event.currentTarget;
+    var idAttr = target.attributes.id;
+    var value = idAttr.nodeValue;
+    console.log(value);
+    //this._petProfileService.deleteUser(value)
   }
 }
