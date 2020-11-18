@@ -65,7 +65,10 @@ export class PetProfileComponent implements OnInit {
     var target = event.target || event.srcElement || event.currentTarget;
     var idAttr = target.attributes.id;
     var value = idAttr.nodeValue;
-    console.log(value);
-    //this._petProfileService.deleteUser(value)
+    console.log("Index being sent: " + value);
+    this._petProfileService.deleteUser(value).subscribe(response => {
+      console.log(response);
+    })
+    this.getAllProfiles();
   }
 }

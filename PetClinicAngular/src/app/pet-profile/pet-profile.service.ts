@@ -10,7 +10,7 @@ export class PetProfileService {
 
   url = "https://localhost:44346/api/v1/users/findbyemail?email=";
   urlAllUsers = "https://localhost:44346/api/v1/users/GetUserList";
-  urlDeleteUser = "https://localhost:44346/api/v1/users/DeleteUser?email=";
+  urlDeleteUser = "https://localhost:44346/api/v1/users/DeleteUser?index=";
 
   getAccount(email:string){
     return this.http.get(this.url + email);
@@ -20,7 +20,7 @@ export class PetProfileService {
     return this.http.get(this.urlAllUsers)
   }
 
-  deleteUser(email:string){
-    return this.http.get(this.urlDeleteUser + email)
+  deleteUser(value:number){
+    return this.http.delete(this.urlDeleteUser + value)
   }
 }
