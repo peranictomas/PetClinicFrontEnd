@@ -29,7 +29,7 @@
     </div>
 
 
-    <div *ngFor="let item of dataList">{{item}}>
+    <div *ngFor="let item of dataList">
       <ul>
         <li>{{item}}</li>
       </ul>
@@ -43,6 +43,7 @@
           Address:{{data.address}}
           Pet Name:{{data.petName}}
           <input id="{{i}}"(click)="deleteUser($event)" type="button" value="Delete" class="deletebtn"/>
+          <input id="{{i}}"(click)="updateUser($event)" type="button" value="Update" class="updatebtn"/>
         </li>
       </ul>
     </div>

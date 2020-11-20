@@ -71,4 +71,16 @@ export class PetProfileComponent implements OnInit {
     })
     this.getAllProfiles();
   }
+
+  updateUser(event){
+    // var target = event.target || event.srcElement || event.currentTarget;
+    // var idAttr = target.attributes.
+    // var value = idAttr.nodeValue;
+    // console.log("Index being sent: " + value);
+    // var model = new petprofileusermodel()
+    // this._petProfileService.updateUser(model).subscribe(response => {
+    //   console.log(response);
+    // })
+    // this.getAllProfiles();
+  }
 }

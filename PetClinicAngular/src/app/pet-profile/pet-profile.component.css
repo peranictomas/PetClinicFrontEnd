@@ -64,6 +64,16 @@ a:hover, a:link, a {
     width: 100%;
     opacity: 0.9;
   }
+  .updatebtn {
+    background-color: #673AB7;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
 
   .deletebtn:hover {
     opacity: 1;
