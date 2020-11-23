@@ -97,3 +97,65 @@ a:hover, a:link, a {
   ul{
     list-style-type: none;
   }
+
+  
+/*https://codepen.io/allistairlee/pen/ELeKMZ used for styling detail*/
+details {
+  position: relative;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1.5em;
+  height: 1.5em;
+  transition: transform 0.1s linear;
+}
+
+summary {
+  width: 100%;
+  padding: 20px;
+  padding-left: 25px;
+  border-bottom: 1px solid #ccc;
+}
+
+summary:hover {
+  color: #007bff;
+}
+
+summary:focus {
+  outline: none;
+}
+
+details[open] summary:before {
+  transform: rotate(90deg);
+}
+
+details[open] > summary {
+  color: #007bff;
+}
+
+details[open] > summary ~ * {
+  animation: open 1s ease;
+}
+
+p.source {
+  padding-top: 50px;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
