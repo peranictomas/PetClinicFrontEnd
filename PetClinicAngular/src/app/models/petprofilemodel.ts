@@ -1,5 +1,5 @@
 export class petprofilemodel {
-    email;
+    userName;
     firstName;
     lastName;
     gender;
@@ -7,10 +7,10 @@ export class petprofilemodel {
     petName;    
     address;
     
-    constructor(firstName:string,lastName:string,email:string,gender:string,address:string,petName:string,age:number){
+    constructor(firstName:string,lastName:string,userName:string,gender:string,address:string,petName:string,age:number){
         this.firstName = firstName;
         this.lastName = lastName;
-        this.email = email;
+        this.userName = userName;
         this.gender = gender;
         this.address = address;
         this.petName = petName;

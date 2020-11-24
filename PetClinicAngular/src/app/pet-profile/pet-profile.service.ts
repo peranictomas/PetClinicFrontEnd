@@ -26,6 +26,6 @@ export class PetProfileService {
   }
 
   updateUser(user:any){
-    return this.http.post(this.urlDeleteUser,user)
+    return this.http.post(this.urlUpdateUser,user)
   }
 }
