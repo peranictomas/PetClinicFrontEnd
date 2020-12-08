@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a href="#" class="websiteName"><mat-icon>pets</mat-icon>Pet Clinic</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-success" type="submit" routerLink="register"> Sign Up</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Edit Role</h1>
+    <p>Enter role to see which users are under that type.</p>
+    <hr>
+
+    <label for="role"><b>Roles</b></label>
+    
+    <select class="custom-select" id="role">
+        <option selected>Choose...</option>
+        <option value="1">Admin</option>
+        <option value="2">Doctor</option>
+        <option value="3">User</option>
+      </select>   
+
+    <hr>  
+    <button type="button" class="btn btn-primary">Show Users</button>
+
+  <div>
+    <details  class="roleDetail text-center">
+      <summary class="roleSummary">show</summary>
+        <ul class="text-left">
+            <li>
+                <label for="gender">User:</label>
+            </li>
+            <li>
+                <select class="custom-select" id="role">
+                    <option selected>Choose...</option>
+                    <option value="1">Admin</option>
+                    <option value="2">Doctor</option>
+                    <option value="3">User</option>
+                  </select>  
+            </li>
+            <li>
+                <button type="button" class="btn btn-danger">Change Role</button>
+           </li>
+        </ul>
+
+    </details>
+  </div>
+</div>

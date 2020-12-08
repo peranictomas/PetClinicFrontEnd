@@ -21,7 +21,8 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { AppointmentPageComponent } from './appointment-page/appointment-page.component';
 import { MessageboardPageComponent } from './messageboard-page/messageboard-page.component';
 import { PaymentsPageComponent } from './payments-page/payments-page.component';
-import { ContactPageComponent } from './contact-page/contact-page.component'
+import { ContactPageComponent } from './contact-page/contact-page.component';
+import { RolePageComponent } from './role-page/role-page.component'
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ContactPageComponent } from './contact-page/contact-page.component'
     AppointmentPageComponent,
     MessageboardPageComponent,
     PaymentsPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    RolePageComponent
   ],
   imports: [
     MatToolbarModule,
@@ -58,7 +60,8 @@ import { ContactPageComponent } from './contact-page/contact-page.component'
       {path: 'account', component: AccountDetailsComponent},
       {path: 'login', component: LoginPageComponent},
       {path: 'profile', component: PetProfileComponent},
-      {path: 'contact', component: ContactPageComponent }
+      {path: 'contact', component: ContactPageComponent },
+      {path: 'role', component: RolePageComponent}
     ]),
   ],
   exports: [RouterModule],
