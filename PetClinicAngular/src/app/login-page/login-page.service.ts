@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class LoginPageService {
 
-  constructor() { }
+  url = "https://localhost:44346/api/v1/users/login";
+  constructor(private http: HttpClient) { }
+
+
+  loginAccount(jsonLogin){
+    return this.http.post(this.url,jsonLogin)
+  }
 }
