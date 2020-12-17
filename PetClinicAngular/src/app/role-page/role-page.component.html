@@ -21,37 +21,24 @@
     <hr>
 
     <label for="role"><b>Roles</b></label>
-    
-    <select class="custom-select" id="role">
-        <option selected>Choose...</option>
-        <option value="1">Admin</option>
-        <option value="2">Doctor</option>
-        <option value="3">User</option>
-      </select>   
+
 
     <hr>  
-    <button type="button" class="btn btn-primary">Show Users</button>
+    <button type="button" (click)="getAdmins();" class="btn btn-primary">Admin</button>
+    <button type="button" (click)="getDoctors();" class="btn btn-primary">Doctor</button>
+    <button type="button" (click)="getUsers();" class="btn btn-primary">User</button>
+
+  <div *ngFor="let data of allRolesList; let i = index">
+        <ul class="text-left">
+          <li>
+            <input type="checkbox" id="{{i}}" (change)="editModel(i)" name="roleIndex{{i}}" [checked]="data.IsSelected">
+            <label for="{{i}}">{{data.Username}}</label><br>
+          </li>
+        </ul>
+  </div>
+
 
   <div>
-    <details  class="roleDetail text-center">
-      <summary class="roleSummary">show</summary>
-        <ul class="text-left">
-            <li>
-                <label for="gender">User:</label>
-            </li>
-            <li>
-                <select class="custom-select" id="role">
-                    <option selected>Choose...</option>
-                    <option value="1">Admin</option>
-                    <option value="2">Doctor</option>
-                    <option value="3">User</option>
-                  </select>  
-            </li>
-            <li>
-                <button type="button" class="btn btn-danger">Change Role</button>
-           </li>
-        </ul>
-
-    </details>
+    <button type="button" (click)="sendEdit();" class="btn btn-primary">Update</button>
   </div>
 </div>

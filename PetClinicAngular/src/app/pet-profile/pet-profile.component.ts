@@ -98,7 +98,6 @@ export class PetProfileComponent implements OnInit {
     this._petProfileService.updateUser(model).subscribe(response => {
       console.log(response);
     })
-    //window.location.reload();
   }
 
 }
