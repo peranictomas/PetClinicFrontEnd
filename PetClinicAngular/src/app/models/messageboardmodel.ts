@@ -1,15 +1,11 @@
 export class messageboardmodel {
     Question;
-    Comments:any;
-    Like;
-
+    Answer:any;
     
     
-    constructor(question:string,comments:any,like:number){
+    constructor(question:string,answer:any){
         this.Question = question;
-        this.Comments = comments;
-        this.Like = like;
-
+        this.Answer = answer;
     }
     }
     

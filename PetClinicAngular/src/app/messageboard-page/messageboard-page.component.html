@@ -23,41 +23,11 @@
     <button type="submit" class="btn btn-primary">Post</button>
 
 
-      <div>      
-        <details  class="profileDetail text-center">
-          <summary class="profileSummary">Why is my cat running from me?</summary>
-            <ul class="text-left">
-                <li>
-                  <label for="ans1">He does not like you</label>
-                </li>
-                <li>
-                  <label for="ans2">Cats are weird</label>
-                </li>
-            </ul>
-        </details>
-      </div>
-
-      <div>      
-        <details  class="profileDetail text-center">
-          <summary class="profileSummary">I keep sneezing from my cat but why?</summary>
-            <ul class="text-left">
-                <li>
-                  <label for="ans3">Maybe you are allergic</label>
-                </li>
-                <li>
-                  <label for="ans4">Its FLU SEASON!</label>
-                </li>
-            </ul>
-        </details>
-      </div>
-
-      <div>      
-        <details  class="profileDetail text-center">
-          <summary class="profileSummary">Why is my dog so hairy?</summary>
-            <ul class="text-left">
-                <li>
-                  <label for="ans5">Its a dog...</label>
-                </li>
-            </ul>
-        </details>
-      </div>
+    <div *ngFor="let data of allQuestionsList; let i = index">
+      <ul class="text-left">
+        <li>
+          <label for="{{i}}">{{data.Question}}</label><br>
+          <label for="{{i}}">{{data.Answer}}</label><br>
+        </li>
+      </ul>
+    </div>

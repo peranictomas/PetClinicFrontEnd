@@ -7,7 +7,6 @@ import { Injectable } from '@angular/core';
 export class RegisterPageService {
 
   url = "https://localhost:44346/api/v1/users/register";
-  errorCheck = false;
   constructor(private http: HttpClient) { }
 
 

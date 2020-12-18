@@ -13,12 +13,8 @@ export class PetProfileComponent implements OnInit {
   @Output() delete: EventEmitter<string> = new EventEmitter();
 
   
-  selectValue;
-  accountData;
   dataList = [];
   allUserList:any;
-  allUserListEmails:any;
-  length = 0;
   model;
   constructor(private _petProfileService: PetProfileService) { }
 
