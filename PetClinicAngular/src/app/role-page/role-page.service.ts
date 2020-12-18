@@ -8,7 +8,6 @@ export class RolePageService {
 
   url = "https://localhost:44346/api/v1/users/ManageUserRole?index=";
   urlEdit = "https://localhost:44346/api/v1/users/EditUserRole?index="
-  errorCheck = false;
   constructor(private http: HttpClient) { }
 
 

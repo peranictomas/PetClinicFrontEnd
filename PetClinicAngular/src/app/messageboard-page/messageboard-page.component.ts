@@ -8,7 +8,7 @@ import {messageboardmodel} from '../models/messageboardmodel'
   styleUrls: ['./messageboard-page.component.css']
 })
 export class MessageboardPageComponent implements OnInit {
-  allQuestionsList:any;
+  allQuestionsList:any[] = [];
   model;
   constructor(private _messageService: MessageBoardPageService) { }
 
@@ -16,17 +16,18 @@ export class MessageboardPageComponent implements OnInit {
     this.getAllQuestionModels();
   }
   getAllQuestionModels(){
-    // this._messageService.grabAllQuestions().subscribe(data=>{
-    //   for (var i in data){
-    //     this.model = new messageboardmodel(data[i].Question,data[i].Comments,data[i].Like);
-    //     this.allQuestionsList.push(this.model);
-    //   }
-    // });
+    this._messageService.grabAllQuestions().subscribe(data=>{
+      console.log(data);
+      for (var i in data){
+        this.model = new messageboardmodel(data[i].question,data[i].answer);
+        this.allQuestionsList.push(this.model);
+      }
+    });
   }
   sendQuestionModel(question){
-    // this._messageService.sendQuestionModel(question).subscribe(data=>{
-    //   console.log(data);
-    // })
+    this._messageService.sendQuestionModel(question).subscribe(data=>{
+      console.log(data);
+    })
   }
 
   commentOnQuestion(index,comment){

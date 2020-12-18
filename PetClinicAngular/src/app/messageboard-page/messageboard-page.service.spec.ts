@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MessageboardPageService } from './messageboard-page.service';
+import { MessageBoardPageService } from './messageboard-page.service';
 
 describe('MessageboardPageService', () => {
-  let service: MessageboardPageService;
+  let service: MessageBoardPageService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(MessageboardPageService);
+    service = TestBed.inject(MessageBoardPageService);
   });
 
   it('should be created', () => {
