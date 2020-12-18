@@ -51,6 +51,9 @@ a:hover, a:link, a {
   ul{
     list-style-type: none;
   }
+  li{
+    font-size: 18px;
+  }
 
   
 /*https://codepen.io/allistairlee/pen/ELeKMZ used for styling detail*/
@@ -76,6 +79,7 @@ summary {
   padding: 20px;
   padding-left: 25px;
   border-bottom: 1px solid #ccc;
+  font-size: 20px;
 }
 
 summary:hover {
