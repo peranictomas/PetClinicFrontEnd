@@ -22,12 +22,13 @@
     </div>
     <button type="submit" class="btn btn-primary">Post</button>
 
-
     <div *ngFor="let data of allQuestionsList; let i = index">
-      <ul class="text-left">
-        <li>
-          <label for="{{i}}">{{data.Question}}</label><br>
-          <label for="{{i}}">{{data.Answer}}</label><br>
-        </li>
-      </ul>
+      <details  class="profileDetail text-center">
+        <summary class="profileSummary" for="{{i}}">{{data.Question}}</summary>
+          <ul class="text-left">
+              <li>
+                <label for="{{i}}">{{data.Answer}}</label><br>
+              </li>
+          </ul>
+      </details>
     </div>
