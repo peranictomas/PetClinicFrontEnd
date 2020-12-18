@@ -59,14 +59,14 @@ a:hover, a:link, a {
     padding-top: 2%;
   }
 
-  .green {
+  .grey {
     background-color: rgb(221, 221, 221);
     float:right;
 
 }
 
 .red {
-    background-color: rgb(59, 177, 255);
+    background-color: rgb(255, 79, 79);
     float:right;
 
 }

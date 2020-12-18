@@ -28,7 +28,9 @@
           <ul class="text-left">
               <li>
                 <label for="{{i}}">{{data.Answer}}</label><br>
-                <button (click)="likeButton()"  [ngClass]="{'green' : toggle, 'red': !toggle}"> Like</button>           
+                <button mat-button (click)="likeButton()"  [ngClass]="{'grey' : toggle, 'red': !toggle}">
+                  <mat-icon>favorite</mat-icon>
+                </button>          
            </li>
           </ul>
       </details>
