@@ -28,7 +28,8 @@
           <ul class="text-left">
               <li>
                 <label for="{{i}}">{{data.Answer}}</label><br>
-              </li>
+                <button (click)="likeButton()"  [ngClass]="{'green' : toggle, 'red': !toggle}"> Like</button>           
+           </li>
           </ul>
       </details>
     </div>

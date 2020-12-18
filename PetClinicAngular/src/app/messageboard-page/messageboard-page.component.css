@@ -58,6 +58,20 @@ a:hover, a:link, a {
   .summaryContainer{
     padding-top: 2%;
   }
+
+  .green {
+    background-color: rgb(221, 221, 221);
+    float:right;
+
+}
+
+.red {
+    background-color: rgb(59, 177, 255);
+    float:right;
+
+}
+ 
+
 /*https://codepen.io/allistairlee/pen/ELeKMZ used for styling detail*/
 details {
   border: 1px solid #aaa;

@@ -35,5 +35,15 @@ export class MessageboardPageComponent implements OnInit {
     // this.sendQuestionModel(this.allQuestionsList[index]);
   }
 
+  
+
+toggle = true;
+status = 'Enable'; 
+
+likeButton(job) {
+    this.toggle = !this.toggle;
+    this.status = this.toggle ? 'Enable' : 'Disable';
+}
+
 
 }
