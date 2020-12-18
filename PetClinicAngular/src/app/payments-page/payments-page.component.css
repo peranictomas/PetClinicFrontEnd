@@ -1,14 +1,21 @@
 .websiteName{
-    font-size: 200%;
-    margin-left: 0.5%;
-    color: white;
-  }
-  
-  a:hover, a:link, a { 
-    text-decoration: none; 
-    color:white
-  } 
-  
+  font-size: 200%;
+  margin-left: 0.5%;
+  color: white;
+}
+
+.body{
+  font-family: Calibri, sans-serif
+}
+
+a:hover, a:link, a { 
+  text-decoration: none; 
+  color:white
+} 
+
+#moreMarginSpace{
+  margin-bottom: 5%;
+}
 
   * {
     box-sizing: border-box;

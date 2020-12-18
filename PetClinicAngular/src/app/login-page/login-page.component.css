@@ -1,8 +1,21 @@
 .websiteName{
-    font-size: 200%;
-    margin-left: 0.5%;
-    color: white;
-  }
+  font-size: 200%;
+  margin-left: 0.5%;
+  color: white;
+}
+
+.body{
+  font-family: Calibri, sans-serif
+}
+
+a:hover, a:link, a { 
+  text-decoration: none; 
+  color:white
+} 
+
+#moreMarginSpace{
+  margin-bottom: 5%;
+}
   
   a:hover, a:link, a { 
     text-decoration: none; 
@@ -19,7 +32,7 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-button {
+.loginButton {
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
