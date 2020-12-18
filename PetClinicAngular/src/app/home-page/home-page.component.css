@@ -46,10 +46,10 @@ a:hover, a:link, a {
 }
 
 .jumbotron3{
-  padding-bottom: 15%;
-  padding-top: 15%;
-  margin-top: 0%;
-  background-color: rgb(214, 214, 214);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+  background-color:rgb(236, 232, 232);
 }
 
 .jumbotron4{
@@ -65,38 +65,40 @@ a:hover, a:link, a {
   padding-bottom: 10%;
 }
 
-.jumbotron5{
-  padding-bottom: 15%;
-  padding-top: 15%;
-  margin-top: 0%;
-}
-
 .jumbotron6{
-  padding-bottom: 15%;
-  padding-top: 15%;
-  margin-top: 0%;
-  background-color: rgb(214, 214, 214);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+  background-color: rgb(236, 232, 232);
 }
 
 .jumbotron7{
-  margin-top: 0%;
+  padding-top: 1%;
+  padding-bottom: 1%;
   background-color: rgb(228, 13, 78);
   text-align: center;
   color: white;
 }
 
 .jumbotron8{
-  margin-top: 0%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
 }
 
 .jumbotron9{
-  padding-bottom: 15%;
-  padding-top: 15%;
+  padding-bottom: 1%;
+  padding-top: 1%;
   margin-top: 0%;
   background-color: rgb(28, 115, 230);
+  color: white;
+  text-align: center;
 }
 
 .jumbotron10{
   margin-top: 0%;
   background-color: rgb(51, 51, 51);
+  padding-top: 1%;
+  padding-bottom: 0.5%;
+  color: white;
 }
