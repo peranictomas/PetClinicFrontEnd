@@ -21,7 +21,7 @@
       <small id="emailHelp" class="form-text text-muted">This will be anonymous </small>
     </div>
     <button type="submit" class="btn btn-primary">Post</button>
-
+<div class="summaryContainer">
     <div *ngFor="let data of allQuestionsList; let i = index">
       <details  class="profileDetail text-center">
         <summary class="profileSummary" for="{{i}}">{{data.Question}}</summary>
@@ -32,3 +32,4 @@
           </ul>
       </details>
     </div>
+  </div>
