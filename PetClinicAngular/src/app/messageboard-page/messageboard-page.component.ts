@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageBoardPageService } from './messageboard-page.service';
 import {messageboardmodel} from '../models/messageboardmodel'
+import { messageboardsendmodel } from '../models/messageboardsendmodel';
 
 @Component({
   selector: 'app-messageboard-page',
@@ -10,6 +11,8 @@ import {messageboardmodel} from '../models/messageboardmodel'
 export class MessageboardPageComponent implements OnInit {
   allQuestionsList:any[] = [];
   model;
+  toggle = true;
+  status = 'Enable'; 
   constructor(private _messageService: MessageBoardPageService) { }
 
   ngOnInit(): void {
@@ -19,28 +22,31 @@ export class MessageboardPageComponent implements OnInit {
     this._messageService.grabAllQuestions().subscribe(data=>{
       console.log(data);
       for (var i in data){
-        this.model = new messageboardmodel(data[i].question,data[i].answer);
+        this.model = new messageboardmodel(data[i].topic,data[i].content,"",data[i].messageBoardId);
         this.allQuestionsList.push(this.model);
       }
     });
   }
   sendQuestionModel(question){
-    this._messageService.sendQuestionModel(question).subscribe(data=>{
+    this.model = new messageboardsendmodel("","",question);
+    this._messageService.sendQuestionModel(this.model).subscribe(data=>{
       console.log(data);
     })
   }
 
-  commentOnQuestion(index,comment){
-    // this.allQuestionsList[index].Comments.push(comment);
-    // this.sendQuestionModel(this.allQuestionsList[index]);
+  commentOnQuestion(event,comment){
+    var target = event.target || event.srcElement || event.currentTarget;
+    var idAttr = target.attributes.id;
+    var value = idAttr.nodeValue;
+    var mid = this.allQuestionsList[value].messageBoardId
+    this.model = new messageboardmodel(this.allQuestionsList[value].question,this.allQuestionsList[value].Answer,this.allQuestionsList[value].topic,mid)
+    this._messageService.addComment(this.model,mid).subscribe(data=>{
+      console.log(data);
+    })
   }
 
-  
 
-toggle = true;
-status = 'Enable'; 
-
-likeButton(job) {
+likeButton() {
     this.toggle = !this.toggle;
     this.status = this.toggle ? 'Enable' : 'Disable';
 }

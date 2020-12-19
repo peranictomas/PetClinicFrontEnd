@@ -6,11 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class MessageBoardPageService {
 
-  url = "https://localhost:44346/api/messageboards/GetAllQA";
+  url = "https://localhost:44346/api/messageboards/ListAllMessages";
   urlCreateMessage = "https://localhost:44346/api/messageboards/CreateMessage"
-  urlComment= "";
-  urlLikeComment="";
-  urlLikeQuestion="";
+  urlComment= "https://localhost:44346/api/messageboards/AddComment";
   constructor(private http: HttpClient) { }
 
   grabAllQuestions(){
@@ -20,4 +18,7 @@ export class MessageBoardPageService {
     return this.http.post(this.urlCreateMessage,questionModel);
   }
 
+  addComment(model,mid){
+    return this.http.post(this.urlComment,model,mid)
+  }
 }

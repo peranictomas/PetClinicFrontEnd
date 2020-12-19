@@ -8,14 +8,14 @@
 </nav>
 
     <div class="form-group">
-      <label for="exampleInputEmail1">Enter Your Question</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Question">
+      <label >Enter Your Question</label>
+      <input type="text" class="form-control" #exampleInputEmail aria-describedby="emailHelp" placeholder="Question">
       <small id="emailHelp" class="form-text text-muted">This will be anonymous </small>
     </div>
-    <button type="submit" class="btn btn-primary">Post</button>
+    <button type="submit" (click)="sendQuestionModel(exampleInputEmail.value)" class="btn btn-primary">Post</button>
 <div class="summaryContainer">
     <div *ngFor="let data of allQuestionsList; let i = index">
-      <button mat-button (click)="likeButton()"  [ngClass]="{'grey' : toggle, 'red': !toggle}">
+      <button mat-button (click)="likeButton()" id="{{i}}" [ngClass]="{'grey' : toggle, 'red': !toggle}">
         <mat-icon>favorite</mat-icon>
       </button>  
       <details  class="profileDetail text-center">
@@ -23,7 +23,9 @@
         <summary class="profileSummary" for="{{i}}">{{data.Question}}</summary>
           <ul class="text-left">
               <li>
-                <label for="{{i}}">{{data.Answer}}</label><br>        
+                <label for="{{i}}">{{data.Answer}}</label><br>  
+                <input type="text" class="form-control" #exampleInputComment aria-describedby="emailHelp" placeholder="Comment">
+                <button type="submit" (click)="commentOnQuestion($event,exampleInputComment.value)" class="btn btn-primary">Post Comment</button>
            </li>
           </ul>
       </details>
