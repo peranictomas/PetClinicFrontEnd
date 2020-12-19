@@ -43,9 +43,8 @@ export class MessageboardPageComponent implements OnInit {
     this.allCommentsList[value] = comment;
   }
 
-likeButton() {
-    this.toggle = !this.toggle;
-    this.status = this.toggle ? 'Enable' : 'Disable';
+click(btn) {
+    btn.active = !btn.active
 }
 
 

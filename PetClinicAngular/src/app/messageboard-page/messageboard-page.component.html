@@ -15,7 +15,7 @@
     <button type="submit" (click)="sendQuestionModel(exampleInputEmail.value)" class="btn btn-primary">Post</button>
 <div class="summaryContainer">
     <div *ngFor="let data of allQuestionsList; let i = index">
-      <button mat-button (click)="likeButton()" id="{{i}}" [ngClass]="{'grey' : toggle, 'red': !toggle}">
+      <button mat-button id="{{i}}" active:false [ngClass]="{'btn btn-danger':data.active, 'btn btn-secondary':!data.active}" (click)="click(data)" style="float: right;">
         <mat-icon>favorite</mat-icon>
       </button>  
       <details  class="profileDetail text-center">
