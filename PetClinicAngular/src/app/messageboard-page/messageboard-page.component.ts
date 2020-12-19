@@ -10,6 +10,7 @@ import { messageboardsendmodel } from '../models/messageboardsendmodel';
 })
 export class MessageboardPageComponent implements OnInit {
   allQuestionsList:any[] = [];
+  allCommentsList:any[] = [];
   model;
   toggle = true;
   status = 'Enable'; 
@@ -24,6 +25,7 @@ export class MessageboardPageComponent implements OnInit {
       for (var i in data){
         this.model = new messageboardmodel(data[i].topic,data[i].content,"",data[i].messageBoardId);
         this.allQuestionsList.push(this.model);
+        this.allCommentsList.push(data[i].content);
       }
     });
   }
@@ -38,13 +40,8 @@ export class MessageboardPageComponent implements OnInit {
     var target = event.target || event.srcElement || event.currentTarget;
     var idAttr = target.attributes.id;
     var value = idAttr.nodeValue;
-    var mid = this.allQuestionsList[value].messageBoardId
-    this.model = new messageboardmodel(this.allQuestionsList[value].question,this.allQuestionsList[value].Answer,this.allQuestionsList[value].topic,mid)
-    this._messageService.addComment(this.model,mid).subscribe(data=>{
-      console.log(data);
-    })
+    this.allCommentsList[value] = comment;
   }
-
 
 likeButton() {
     this.toggle = !this.toggle;

@@ -19,6 +19,6 @@ export class MessageBoardPageService {
   }
 
   addComment(model,mid){
-    return this.http.post(this.urlComment,model,mid)
+    return this.http.post(this.urlComment,{model,mid})
   }
 }
