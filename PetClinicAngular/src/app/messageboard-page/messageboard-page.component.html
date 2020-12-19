@@ -15,14 +15,15 @@
     <button type="submit" class="btn btn-primary">Post</button>
 <div class="summaryContainer">
     <div *ngFor="let data of allQuestionsList; let i = index">
+      <button mat-button (click)="likeButton()"  [ngClass]="{'grey' : toggle, 'red': !toggle}">
+        <mat-icon>favorite</mat-icon>
+      </button>  
       <details  class="profileDetail text-center">
+        
         <summary class="profileSummary" for="{{i}}">{{data.Question}}</summary>
           <ul class="text-left">
               <li>
-                <label for="{{i}}">{{data.Answer}}</label><br>
-                <button mat-button (click)="likeButton()"  [ngClass]="{'grey' : toggle, 'red': !toggle}">
-                  <mat-icon>favorite</mat-icon>
-                </button>          
+                <label for="{{i}}">{{data.Answer}}</label><br>        
            </li>
           </ul>
       </details>

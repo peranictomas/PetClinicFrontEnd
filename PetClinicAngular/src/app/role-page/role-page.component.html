@@ -14,11 +14,16 @@
 
     <label for="role"><b>Roles</b></label>
 
-
-    <hr>  
-    <button type="button" (click)="getAdmins();" class="btn btn-primary">Admin</button>
-    <button type="button" (click)="getDoctors();" class="btn btn-primary">Doctor</button>
-    <button type="button" (click)="getUsers();" class="btn btn-primary">User</button>
+<br>
+<div>
+  <div class="row">
+    <div class="col">
+      <button type="button" (click)="getAdmins();" class="btn btn-primary" >Admin </button>
+      <button type="button" (click)="getDoctors();" class="btn btn-primary">Doctor </button>
+      <button type="button" (click)="getUsers();" class="btn btn-primary">User</button>
+    </div>
+  </div>
+</div>
 
   <div *ngFor="let data of allRolesList; let i = index">
         <ul class="text-left">
@@ -29,7 +34,7 @@
         </ul>
   </div>
 
-
+  <br>
   <div>
     <button type="button" (click)="sendEdit();" class="btn btn-primary">Update</button>
   </div>
